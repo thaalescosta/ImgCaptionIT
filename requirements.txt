@@ -1,0 +1,21 @@
+# Core Python dependencies for CaptionIT.
+# PyTorch (torch) is installed separately because the official wheels
+# are published on the PyTorch index and depend on your Python/CUDA
+# versions.  If a plain `pip install -r requirements.txt` fails with
+# "No matching distribution found for torch" it usually means your
+# Python version (e.g. 3.13) is not yet supported; use 3.11/3.12 or
+# install the wheel manually, e.g.:
+#
+#   pip install torch --index-url https://download.pytorch.org/whl/cu124
+#
+# You can also specify `--index-url` when installing from this file.
+
+gradio>=4.0.0
+transformers>=4.45.0
+# torch is installed from the PyTorch index; specify a minimum
+# version only.  please install with the appropriate CUDA wheel as
+# shown above ("pip install torch --index-url ...").  the index currently
+# offers 2.6.x and later for Python3.11/3.12.
+torch>=2.6.0
+pillow>=10.0.0
+
